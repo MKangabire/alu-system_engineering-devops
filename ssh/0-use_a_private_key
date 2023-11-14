@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#connecting to aserver using the private key
+
+server_address="172.17.0.5"
+ssh -i ~/.ssh/school ubuntu@$server_address
