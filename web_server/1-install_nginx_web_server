@@ -13,9 +13,9 @@ printf %s "server {
      root        /etc/nginx/html;
      index       index.html index.htm;
 }
-" > /etc/nginx/sites-available/default
+" > sudo tee /etc/nginx/sites-available/default > /dev/null
 
-service nginx restart
+sudo service nginx restart
 
-status_code=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/}
+status_code=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/)
 echo "$status_code"
